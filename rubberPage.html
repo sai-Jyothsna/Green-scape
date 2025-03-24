@@ -1,105 +1,174 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Rubber plant page</title>
+<title>Rubber Plant Care Guide</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
-body {font-family: "Times New Roman", Georgia, Serif;}
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display";
-  letter-spacing: 5px;
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
-.login-button {
+
+.plant-header {
+    background-color: rgba(76, 175, 80, 0.1);
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.plant-title {
+    color: #2E7D32;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.plant-subtitle {
+    color: #388E3C;
+    font-size: 1.2rem;
+}
+
+.plant-content {
+    background-color: white;
     border-radius: 10px;
-    width: 30%; 
-    font-family: "Open Sans", sans-serif;
-	font-weight: bold;
-    font-size: 16px;
-    letter-spacing: 2px; 
-    background-color: #99BC85; 
-    text-transform: uppercase;
-    color: #000;
-    cursor: pointer;
-    border: 3px solid;
-    padding: 0.5em 0.4em;
-    box-shadow: 1px 1px , 2px 2px , 3px 3px , 4px 4px , 5px 5px ;
-    touch-action: manipulation;
-    margin-bottom: 15px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-.wrap { 
-	display: flex; 
-	justify-content: space-around; 
-	align-items: center;
-    margin-bottom: 20px; 
+
+.care-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #F1F8E9;
+    border-radius: 8px;
 }
-.login-button:hover{
-    color: #99BC85;
-    background-color: #001e1d;
+
+.care-title {
+    color: #2E7D32;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.care-list {
+    list-style: none;
+    padding: 0;
+}
+
+.care-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.care-list li:before {
+    content: "•";
+    color: #4CAF50;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #388E3C;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+.header-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
 }
 </style>
 </head>
 <body>
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:100%;" id="home">
-  <img class="w3-image" src="Rubberplant.jpg" alt="peace lily" width="1600">
-  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
-    <h1 class="w3-xxlarge">Rubber Plant</h1>
-  </div>
-</header>
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:1100px">
-
-  <!-- About Section -->
-  <div class="w3-row w3-padding-64" id="about">
-    <div class="w3-col m6 w3-padding-large w3-hide-small">
-     <img src="/Users/alekhyakolukuluri/Desktop/A6.png" class="w3-round w3-image" alt="Table Setting" width="600" height="750">
-    </div>
-
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">About Rubber Plant</h1><br>
-      <p class="w3-large">Is there a perfect houseplant? Something easy to care for, can grow for years and has a timeless beauty? I think the rubber tree ticks all of those boxes. This tree has glossy, thick leaves and makes quite an impression in any room.</p>
-      <p class="w3-large w3-hide-medium">The rubber tree is also known as the Ficus Elastica and comes from India and parts of tropical Asia. The shiny, leathery leaves give this plant a distinct look. There is really nothing like it! The rubber tree has a wonderful shape and is a great option for anyone who loves houseplants. </p>
-    </div>
-  </div>
-  
-  <hr>
-  
-  <!-- Menu Section -->
-  <div class="w3-row w3-padding-64" id="menu">
-    <div class="w3-col l6 w3-padding-large">
-      <h1 class="w3-center">How to grow Rubber Plant</h1><br>
-      <h4>Potting</h4>
-      <p class="w3-text-grey">When you bring home a new rubber tree, here are a few things to consider in regards to potting it. It might seem like a good idea to put your plant in a big pot so it has lots of room to grow, but the rubber tree prefers to be a bit crowded in a pot.</p><br>
-    
-      <h4>Light</h4>
-      <p class="w3-text-grey">This plant loves to drink up the light, so placement in your home is crucial to maintain a healthy plant. The first thing when choosing a spot is to make sure that it doesn’t have a draft, isn’t near a vent, or has an AC unit blowing on it.</p><br>
-    
-      <h4>Watering</h4>
-      <p class="w3-text-grey">Finding a consistent watering rhythm for your tree will help give you the confidence you need to keep your plant alive and healthy for years to come. If the leaves start to droop a bit, then you know your plant is very thirsty.</p><br>  
-    </div>
-    
-    <div class="w3-col l6 w3-padding-large">
-      <img src="/Users/alekhyakolukuluri/Desktop/A5.png" class="w3-round w3-image" alt="Menu" style="width:100%">
-    </div>
-  </div>
-
-  <hr>
-  <div class="wrap"> 
-    <button class="login-button" onclick="location.href='indexPage.html'">
-          Buy 
-      </button>
-      <button class="login-button" onclick="location.href='index.html'">
-        Home 
-    </button>
-  </div> 
-  
-<!-- End page content -->
+<div class="plant-header">
+    <h1 class="plant-title">Rubber Plant (Ficus elastica)</h1>
+    <p class="plant-subtitle">A striking indoor plant with glossy, dark green leaves</p>
 </div>
 
+<div class="plant-content">
+    <img src="Rubberplant.jpg" alt="Rubber Plant Full View" class="header-image">
+
+    <div class="care-section">
+        <h2 class="care-title">About Rubber Plant</h2>
+        <p>Is there a perfect houseplant? Something easy to care for, can grow for years and has a timeless beauty? The rubber tree ticks all of those boxes. This tree has glossy, thick leaves and makes quite an impression in any room.</p>
+        <p>The rubber tree is also known as the Ficus Elastica and comes from India and parts of tropical Asia. The shiny, leathery leaves give this plant a distinct look. There is really nothing like it! The rubber tree has a wonderful shape and is a great option for anyone who loves houseplants.</p>
+    </div>
+
+    <div class="care-section">
+        <h2 class="care-title">Plant Care Guide</h2>
+        <ul class="care-list">
+            <li><strong>Light:</strong> Bright indirect light, can tolerate some direct morning sun</li>
+            <li><strong>Water:</strong> Allow top soil to dry between waterings</li>
+            <li><strong>Soil:</strong> Well-draining, rich potting mix</li>
+            <li><strong>Temperature:</strong> 60-75°F (15-24°C)</li>
+            <li><strong>Humidity:</strong> Moderate to high humidity</li>
+        </ul>
+    </div>
+
+    <div class="care-section">
+        <h2 class="care-title">Benefits</h2>
+        <ul class="care-list">
+            <li>Excellent air purifier</li>
+            <li>Striking large leaves add visual impact</li>
+            <li>Long-lasting and durable</li>
+            <li>Can grow quite tall indoors</li>
+            <li>Easy to propagate</li>
+        </ul>
+    </div>
+
+    <div class="care-section">
+        <h2 class="care-title">Common Issues</h2>
+        <ul class="care-list">
+            <li><strong>Leaf drop:</strong> Usually due to temperature changes or drafts</li>
+            <li><strong>Yellow leaves:</strong> Often indicates overwatering</li>
+            <li><strong>Brown edges:</strong> Low humidity or inconsistent watering</li>
+            <li><strong>Leggy growth:</strong> Insufficient light</li>
+        </ul>
+    </div>
+</div>
+
+<div style="text-align: center;">
+    <a href="index.html" class="home-button">Back to Home</a>
+</div>
 
 </body>
 </html>
