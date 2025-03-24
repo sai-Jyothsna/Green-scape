@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
@@ -5,30 +6,166 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-<title>Discussion App</title>
+        <title>Discussion App</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
         <link href="./forumPage.css" type="text/css" rel="stylesheet" />
-   
-    
+        <style>
+            body {
+                background-color: #E8F5E9;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .navbar {
+                background-color: #99BC85 !important;
+                border: solid;
+                border-color: #004643;
+                border-width: 8px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .navbar-brand {
+                color: #004643 !important;
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+            .nav-link {
+                color: #004643 !important;
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+            .nav-link:hover {
+                color: #2E7D32 !important;
+            }
+            .app_body {
+                max-width: 1200px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: white;
+                border-radius: 15px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+            .activity {
+                background-color: #F5F5F5;
+                padding: 20px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+            .actions {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+            .actions button {
+                background-color: #99BC85;
+                color: #004643;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+            }
+            .actions button:hover {
+                background-color: #7FA66E;
+            }
+            .actions input {
+                flex: 1;
+                padding: 10px;
+                border: 2px solid #99BC85;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+            .questions ul {
+                list-style: none;
+                padding: 0;
+            }
+            .question_form {
+                background-color: #F5F5F5;
+                padding: 30px;
+                border-radius: 10px;
+            }
+            .new_form h1 {
+                color: #004643;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .new_form p {
+                color: #666;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .new_form form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            .new_form input[type="text"] {
+                padding: 12px;
+                border: 2px solid #99BC85;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+            .new_form textarea {
+                padding: 12px;
+                border: 2px solid #99BC85;
+                border-radius: 5px;
+                min-height: 150px;
+                font-size: 1rem;
+                resize: vertical;
+            }
+            .login-button {
+                background-color: #99BC85;
+                color: #004643;
+                border: none;
+                padding: 12px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 1rem;
+                transition: background-color 0.3s ease;
+            }
+            .login-button:hover {
+                background-color: #7FA66E;
+            }
+            #not_found {
+                text-align: center;
+                color: #666;
+                padding: 20px;
+                background-color: #FFF3E0;
+                border-radius: 5px;
+                margin-top: 20px;
+            }
+            @media (max-width: 768px) {
+                .app_body {
+                    margin: 10px;
+                    padding: 15px;
+                }
+                .actions {
+                    flex-direction: column;
+                }
+                .actions button {
+                    width: 100%;
+                }
+            }
+        </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #D4E7C5; border: solid; border-color: #004643; border-width: 8px;">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#">
                 Discussion Portal
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="background-color: #D4E7C5;">
-              <div class="navbar-nav ml-auto" style="background-color: #D4E7C5;">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
                 <a class="nav-link active" href="index.html">
                     Back to Home
                   <span class="sr-only">(current)</span>
                 </a>
-                
               </div>
             </div>
-          </nav>
+        </nav>
         <div class="app_body">
             <div class="activity">
                 <div class="actions">
@@ -49,11 +186,8 @@
                         <input type="text" name="subject" placeholder="Subject" required />
                         <textarea name="question" placeholder="Question" required ></textarea>
                         <input type="submit" class="login-button" value="submit"/> 
-                            
                     </form>
-                 
                 </div>
-                
             </div>
         </div>
         <script src="forumPage.js"></script>
