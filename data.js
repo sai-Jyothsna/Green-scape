@@ -75,7 +75,7 @@ let shopItemsData = [
     name: "Indian Gardens Plant Fertilizer",
     price: 279,
     desc: "This plant improves air quality by absorbing bacteria and mold spores along with airborne contaminants.",
-    img: "fertilizers.png",
+    img: "fertilizers.jpg",
   },
   {
     id: "4thyfhcbcv",
