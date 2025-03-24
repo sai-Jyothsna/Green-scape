@@ -6,11 +6,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
-body {font-family: "Times New Roman", Georgia, Serif;}
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display";
-  letter-spacing: 5px;
+body {
+    font-family: "Times New Roman", Georgia, Serif;
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%); /* Light green gradient background */
+    margin: 0;
+    padding: 0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+}
+
+/* Header image size adjustment */
+.w3-image {
+    width: 100%;
+    height: 300px; /* Reduced from 400px */
+    object-fit: cover;
+}
+
+/* About section image size adjustment */
+.w3-round.w3-image {
+    width: 100%;
+    height: 400px; /* Reduced from 600px */
+    object-fit: cover;
+}
+
+/* Menu section image size adjustment */
+.w3-col.l6 .w3-round.w3-image {
+    width: 100%;
+    height: 300px; /* Reduced from original size */
+    object-fit: cover;
+}
+
 .login-button {
     border-radius: 10px;
     width: 30%; 
@@ -24,19 +52,30 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     border: 3px solid;
     padding: 0.5em 0.4em;
-    box-shadow: 1px 1px , 2px 2px , 3px 3px , 4px 4px , 5px 5px ;
+    box-shadow: 1px 1px , 2px 2px , 3px 3px , 4px 4px , 5px 5px;
     touch-action: manipulation;
     margin-bottom: 15px;
 }
+
 .wrap { 
     display: flex; 
     justify-content: space-around; 
     align-items: center;
     margin-bottom: 20px; 
 }
-.login-button:hover{
+
+.login-button:hover {
     color: #99BC85;
     background-color: #001e1d;
+}
+
+/* Content background */
+.w3-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 </style>
 </head>
